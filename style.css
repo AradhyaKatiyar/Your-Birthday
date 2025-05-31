@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(to bottom right, #ffd1dc, #fff0f5);
+    color: #333;
+    text-align: center;
+    overflow-x: hidden;
+    background: url('./assets/back3.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: inherit; /* uses same background as body */
+    filter: blur(2px); /* adjust the blur amount here */
+    z-index: -1; /* behind all content */
+    background: inherit;
+background-color: rgba(255, 182, 193, 0.3); /* soft pink overlay */
+background-blend-mode: overlay;
+
+  }
+  
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 40px;
+    color: #d63384;
+  }
+  
+  #countdown {
+    font-size: 2rem;
+    margin: 20px auto;
+    padding: 20px 30px;
+    background: linear-gradient(145deg, #ffe6f0, #fff0f8);
+    color: #d63384;
+    border: 2px dashed #f8a1c4;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(255, 182, 193, 0.4);
+    transition: all 0.3s ease-in-out;
+    max-width: 400px;
+  }
+  
+  .slideshow {
+    width: 50vw; /* 50% of the viewport width */
+  max-width: 320px; /* limit max size for large screens */
+  margin: 40px auto; /* center horizontally with some vertical spacing */
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(255, 182, 193, 0.3);
+  background: #fff0f5;
+  }
+  
+  .slides-wrapper {
+    display: flex;
+    width: 100%;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .slide img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(255, 182, 193, 0.4);
+  }
+  
+  .slide p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #d63384;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  #birthdayMessage {
+    display: none;
+    margin-top: 50px;
+    padding: 30px;
+    font-size: 1.4rem;
+    background: #fff0f5;
+    border-radius: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 2s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    pointer-events: none;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 60px;
+    padding: 20px;
+    background-color: #ffe6f0;
+    color: #d63384;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: bold;
+    border-top: 2px dashed #ffb6c1;
+  }
+  
+  /* ===== Mobile Responsive ===== */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+      margin-top: 30px;
+    }
+  
+    #countdown {
+      font-size: 1.6rem;
+      padding: 15px 20px;
+      max-width: 350px;
+      border-radius: 15px;
+    }
+  
+    .slideshow {
+      width: 60vw;
+      max-width: 280px;
+      margin: 40px auto;
+    }
+  
+    .slide p {
+      font-size: 1.1rem;
+    }
+  
+    #birthdayMessage {
+      font-size: 1.2rem;
+      padding: 25px;
+      max-width: 90%;
+    }
+  
+    footer {
+      font-size: 0.95rem;
+      padding: 18px 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.6rem;
+      margin-top: 20px;
+    }
+  
+    #countdown {
+      font-size: 1.3rem;
+      padding: 12px 15px;
+      max-width: 300px;
+      border-radius: 12px;
+    }
+  
+    .slideshow {
+      width: 80vw;
+      margin: 30px auto;
+      max-width: 260px;
+    }
+  
+    .slide p {
+      font-size: 1rem;
+    }
+  
+    #birthdayMessage {
+      font-size: 1rem;
+      padding: 20px 15px;
+      margin: 30px 10px;
+    }
+  
+    footer {
+      font-size: 0.85rem;
+      padding: 15px 10px;
+    }
+  }
+  
